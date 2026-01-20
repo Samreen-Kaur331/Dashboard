@@ -34,7 +34,7 @@ const Dashboard = () => {
 
         {/* Scroll only on small screens */}
         <div className="overflow-x-auto">
-          <div className="relative border-2 border-black rounded-lg h-56 sm:h-64 min-w-[420px] sm:min-w-full">
+          <div className="relative border-2 border-black rounded-lg h-56 sm:h-64 min-w-420px  sm:min-w-full">
 
             {/* Y Axis */}
             <div className="absolute left-2 top-4 bottom-10 flex flex-col justify-between text-xs sm:text-sm text-gray-600">
