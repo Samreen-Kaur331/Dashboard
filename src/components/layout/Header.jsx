@@ -1,38 +1,29 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
   return (
-    <header className="bg-white shadow-md px-4 py-3">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-        
-        {/* Title */}
-        <h2 className="text-lg sm:text-xl font-semibold text-gray-800">
-          Dashboard Overview
-        </h2>
+    <header className="flex items-center justify-between bg-white px-4 py-3 shadow sm:px-6">
+      
+      {/* Left: Hamburger (mobile only) */}
+      <button
+        onClick={toggleSidebar}
+        className="sm:hidden text-gray-700 focus:outline-none"
+      >
+        ☰
+      </button>
 
-        {/* Right section */}
-        <div className="flex items-center gap-3 w-full sm:w-auto">
-          
-          {/* Search */}
-          <input
-            type="text"
-            placeholder="Search..."
-            className="
-              border 
-              px-3 
-              py-2 
-              rounded-lg 
-              w-full 
-              sm:w-64
-              focus:outline-none
-              focus:ring-2
-              focus:ring-black
-            "
-          />
+      {/* Title */}
+      <h1 className="text-lg font-semibold text-gray-800">
+        Dashboard Overview
+      </h1>
 
-          {/* Avatar */}
-          <div className="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"></div>
-        </div>
+      {/* Right */}
+      <div className="flex items-center gap-3">
+        <input
+          className="border rounded px-3 py-1 text-sm"
+          placeholder="Search"
+        />
+        <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
       </div>
     </header>
   );

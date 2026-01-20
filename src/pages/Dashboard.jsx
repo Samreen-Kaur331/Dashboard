@@ -12,13 +12,10 @@ const Dashboard = () => {
 
   return (
     <div className="w-full">
-      
-      {/* Page Title */}
       <h1 className="text-2xl sm:text-3xl font-bold mb-6">
         Dashboard
       </h1>
 
-      {/* ✅ STAT CARDS */}
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="bg-blue-300 p-4 rounded-xl shadow">
           <h3 className="text-sm font-medium">Ideas</h3>
@@ -41,32 +38,24 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* ✅ GRAPH SECTION */}
       <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 w-full">
         <h2 className="text-base sm:text-lg font-semibold mb-4">
           Task Distribution
         </h2>
 
-        {/* Scrollable on mobile */}
         <div className="overflow-x-auto">
-          <div className="relative border-2 border-black rounded-lg h-64 min-w-[500px]">
-
-            {/* Y Axis Numbers */}
+          <div className="relative border-2 border-black rounded-lg h-56 sm:h-64 min-w-[500px]">
             <div className="absolute left-2 top-4 bottom-10 flex flex-col justify-between text-sm text-gray-600">
-              {[4, 3, 2, 1, 0].map((num) => (
+              {[4, 3, 2, 1, 0].map(num => (
                 <span key={num}>{num}</span>
               ))}
             </div>
 
-            {/* Y Axis Line */}
             <div className="absolute left-8 top-4 bottom-10 w-px bg-gray-500"></div>
-
-            {/* X Axis Line */}
             <div className="absolute left-8 right-4 bottom-10 h-px bg-gray-500"></div>
 
-            {/* X Axis Labels */}
             <div className="absolute left-8 right-4 bottom-2 flex justify-between text-sm text-gray-600 px-10">
-              {labels.map((label) => (
+              {labels.map(label => (
                 <span key={label}>{label}</span>
               ))}
             </div>

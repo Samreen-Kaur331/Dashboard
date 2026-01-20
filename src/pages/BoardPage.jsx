@@ -3,9 +3,8 @@ import Board from "../components/board/Board.jsx";
 
 const BoardPage = () => {
   return (
-    <section className="w-full">
+    <section className="w-full max-w-7xl mx-auto px-2 sm:px-4">
       
-      {/* Page Header */}
       <div className="mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
           Board
@@ -15,7 +14,6 @@ const BoardPage = () => {
         </p>
       </div>
 
-      {/* Board */}
       <div className="overflow-x-auto">
         <Board />
       </div>
